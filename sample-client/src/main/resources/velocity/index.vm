@@ -1,0 +1,11 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+    #if($currentUser)
+    <ul>
+        <li><a href="#" id="listTransactions">List transactions</a></li>
+        <li><a href="/transaction/new">Transfer money</a></li>
+    </ul>
+    #end
+    <div id="resultContainer">
+    </div>
+#end

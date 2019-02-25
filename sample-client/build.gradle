@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'sample.Program'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile group: 'com.sparkjava', name: 'spark-core', version:'2.5'
+    compile group: 'com.sparkjava', name: 'spark-template-velocity', version:'2.3'
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile 'commons-codec:commons-codec:1.8'
+    testCompile("junit:junit")
+}

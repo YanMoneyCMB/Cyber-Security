@@ -1,0 +1,32 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+    <p>Wondough makes it dead simple to send money!</p>
+
+    #if($error)
+    <div id="error">$error</div>
+    #end
+
+    <form method="post">
+      <input type="hidden" id="csrftoken" name="csrftoken" value="$csrftoken" />
+        <table>
+            <tr>
+                <td>Who would you like to send money to?</td>
+                <td><input type="text" id="recipient" name="recipient" value="foo@wondoughbank.com" /></td>
+            </tr>
+            <tr>
+                <td>What is the money for?</td>
+                <td><input type="text" id="description" name="description" value="" /></td>
+            </tr>
+            <tr>
+                <td>How much money do you want to send?</td>
+                <td><input type="text" id="amount" name="amount" value="0.0" /></td>
+            </tr>
+
+            <tr>
+                <td>Ready?</td>
+                <td><button type="button" id="addTransaction">Send money!</button></td>
+            </tr>
+        </table>
+
+    </form>
+#end

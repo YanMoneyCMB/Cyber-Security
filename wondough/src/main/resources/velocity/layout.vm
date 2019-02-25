@@ -1,0 +1,24 @@
+#macro(mainLayout)
+<html>
+<head>
+    <title>Wondough Bank</title>
+    <link rel="stylesheet" href="/wondough.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <nav>
+    </nav>
+</header>
+<main>
+    <div id="content">
+        $bodyContent
+    </div>
+</main>
+<footer>
+    Copyright 2018 Wondough Bank
+</footer>
+</body>
+</html>
+#end

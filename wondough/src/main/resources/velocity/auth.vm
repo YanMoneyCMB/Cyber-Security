@@ -1,0 +1,19 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+    <div id="logo-container"><img id="logo" src="wondough.png"></img></div>
+    <p style="width: 500px; margin: 0 auto; padding-bottom: 10px;">$appname wants to access your account on your behalf. In order to proceed, you must enter your username and password.</p>
+
+    #if($error)
+    <div id="error">$error</div>
+    #end
+
+    <div id="login-form">
+        <form method="POST" action="/auth">
+            <input type="hidden" name="target" value="$target" />
+            <input type="hidden" name="appname" value="$appname" />
+            <div><input type="text" name="username" value="" placeholder="Username" /></div>
+            <div><input type="password" name="password" value="" placeholder="Password" /></div>
+            <div><input type="submit" value="Submit" /></div>
+        </form>
+    </div>
+#end
